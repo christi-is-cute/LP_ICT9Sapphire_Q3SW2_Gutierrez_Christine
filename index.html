@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Math Skill Tester 🎀</title>
+	
+<br>
+
+    <style>
+        body {
+            background-color: #ffeef0;
+            font-family: sans-serif;
+            color: #d63384;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background: #fff5f7;
+            padding: 20px;
+            border-radius: 20px;
+            width: 50%;
+            box-shadow: 4px 4px 15px rgba(214, 51, 132, 0.3);
+            border: 2px solid #d63384;
+        }
+        button {
+            display: block;
+            width: 80%;
+            margin: 10px auto;
+            padding: 12px;
+            border: none;
+            border-radius: 15px;
+            font-size: 18px;
+            cursor: pointer;
+            color: white;
+        }
+        .pink { background: #ff9fb5; }
+        .pinky { background: #ff7897; }
+        .pinkyy { background: #ff557c; }
+        .pinkyyy { background: #e62954; }
+
+        h2 {
+            font-size: 24px;
+        }
+        input {
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid #d63384;
+            font-size: 16px;
+            text-align: center;
+        }
+    </style>
+
+</head>
+<body>
+
+
+    <div class="container">
+        <h2 align="center"> Hi, my name is Christine! Let's test your math skills :) </h2>
+        <p align="center"> Enter any value for <b> A </b>: <input type="number" id="a" onchange="updateA()"></p>
+        <p align="center">Enter any value for <b> B </b>: <input type="number" id="b" onchange="updateB()"></p>
+        
+<br>
+
+        <button class="pink" onclick="multiply()"> Product of A and B </button>
+        <button class="pinky" onclick="power()"> A raised to B </button>
+        <button class="pinkyy" onclick="modulus()"> Get the remainder</button>
+        <button class="pinkyyy" onclick="checkEqual()"> Check if A is equal to B </button>
+        
+        <p id="result"></p>
+    </div>
+    
+    <script>
+
+        let a, b;
+        function updateA() {
+            a = Number (document.getElementById ("a").value);
+        }
+        function updateB() {
+            b = Number (document.getElementById ("b").value);
+        }
+        function multiply() {
+            document.getElementById("result").innerHTML = a + b;
+        }
+        function power() {
+            document.getElementById("result").innerHTML = a ** b;
+        }
+        function modulus() {
+            document.getElementById("result").innerHTML = a % b;
+        }
+        function checkEqual() {
+            document.getElementById("result").innerHTML = (a == b);
+        }
+
+    </script>
+
+</body>
+</html>
